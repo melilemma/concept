@@ -1,0 +1,62 @@
+                     +----------------------+
+                     |       Patients       |
+                     +----------------------+
+                           | PK Patient_ID
+                           | First_Name
+                           | Middle_Name
+                           | Last_Name
+                           | Date_of_Birth
+                           | Gender
+                           | Contact_Information
+                           | Medical_History
+                           | Address
+                           |
+                           |
++--------------------------|------------------------+
+|                          |                        |
+|                          |                        |
+|                          |                        |
+|                          |                        |
+|                          |                        |
+|   +----------------------|----------------------+ |
+|   |   Medical_Records    |       Employees       | |
+|   +----------------------|----------------------+ |
+|       PK Record_ID       |      PK Employee_ID   | |
+|       Record_Details    ||     First_Name        | |
+|       Recorded_By ------|+   Middle_Name        | |
+|                          |    Last_Name         | |
++--------------------------+    Specialty         | |
+      |                         License_Number    | |
+      |                               Credentials   | |
+      |                                             | |
+      |                                             | |
++--------------------------+                       | |
+|   Patient_Has            |                       | |
++--------------------------+                       | |
+|  FK Patient_ID           |                       | |
+|  FK Record_ID            |                       | |
++--------------------------+-----------------------+
+      |  
+      |
++--------------------------+
+|   Patient_Receives       |
++--------------------------+
+|  FK Patient_ID           |
+|  FK Prescription_ID      |
++--------------------------+
+      |
+      |
++--------------------------+
+|   Patient_Undergoes      |
++--------------------------+
+|  FK Patient_ID           |
+|  FK Test_ID              |
++--------------------------+
+      |
+      |
++--------------------------+
+|   Assigned               |
++--------------------------+
+|  FK Patient_ID           |
+|  FK Room_ID              |
++--------------------------+
